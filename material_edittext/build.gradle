@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 28
+
+  defaultConfig {
+    minSdkVersion 15
+    targetSdkVersion 28
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation 'com.android.support:support-annotations:22.2.0'
+  implementation 'com.android.support:appcompat-v7:28.+'
+  implementation project(':nine0ldandroids')
+}
+
+
